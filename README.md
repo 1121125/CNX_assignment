@@ -27,5 +27,18 @@
 ### 3.
 
 To run this project
+
+```bash
+git clone https://github.com/1121125/web_restaurant_react.git
+```
+
+```bash
 pnpm install
+```
+
+```bash
 pnpm dev
+```
+
+I also deploy this project on [Na-Udon](https://na-udon.vercel.app/)
+please be aware that there might be a slight delay during the initial visit as the database server may need some time to wake up. We appreciate your patience and understanding.
