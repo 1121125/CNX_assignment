@@ -14,7 +14,10 @@
   #### Example
 
   HTML
+
+  ```html
   <button class="btn btn-primary">Bootstrap Button</button>
+  ```
 
 - การออกแบบ css ด้วย BEM
   BEM หรือ Block Element Modifier คือมาตราฐานรูปแบบในการจัดการส่วนต่างๆบนหน้าเว็บไชต์ โดยจะมองส่วนต่างๆเป็น block(ส่วนที่ครอบ element ย่อยๆ),element(html element ต่างๆที่อยู่ภายใน block) และ modifier(ส่วนที่มีหน้าตาคล้ายกัน แตกต่างกันเล็กน้อย)
