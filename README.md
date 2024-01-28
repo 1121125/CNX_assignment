@@ -26,21 +26,27 @@
   #### Example
 
   CSS
+
+  ```css
   .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
   }
 
   .button--large {
-  font-size: 18px;
+    font-size: 18px;
   }
+  ```
 
   HTML
+
+  ```html
   <a href="#" class="button">BEM Button</a>
   <a href="#" class="button button--large">BEM Large Button</a>
+  ```
 
 - การใช้ #id
   การอ้างอิงถึงelement id ใดๆนั้น ใน css จะใช้ สัญญลักษณ์ # แล้วตามด้วยชื่อ id ที่ต้องการระบุถึง โดยชื่อตัวแรกต้องเป็น a-z ห้ามเป็นสัญญลักษณ์หรือตัวเลข และในแต่ละชื่อจะเป็นแบบ case insensitive โดยใน 1 หน้าเว็บ id ที่ถูกตั่งขึ้นมาจะสามารถใช้ได้เพียงครั้งเดียวเท่านั้น และ 1 tag จะมีได้เพียง 1 ไอดีเท่านั้น โดยระดับควมสำคัญนั้น การใช้ id จะสูงกว่า class
@@ -48,12 +54,18 @@
   #### Example
 
   CSS
+
+  ```css
   #submit {
-  background-color: green;
+    background-color: green;
   }
+  ```
 
   HTML
+
+  ```html
   <button id="submit">Submit</button>
+  ```
 
 - การใช้ .class
   คล้ายกับ id ต่างกันตรงที่จะใช้ สัญญลักษณ์ . ในส่วนของการใช้งานที่หน้าเว็บ 1 หน้าเว็บจะสามารถเรียกใช้ได้หลายครั้ง และใน 1 tag สามารถมีหลาย class ได้
@@ -61,12 +73,18 @@
   #### Example
 
   CSS
+
+  ```css
   .submit {
-  background-color: green;
+    background-color: green;
   }
+  ```
 
   HTML
+
+  ```html
   <button class="submit">Submit</button>
+  ```
 
 - AJAX
   คือ Asynchronous JavaScript และ XML เป็นเทคนิคการสร้างเว็บแอปพลิเคชันสามารถตอบสนองต่อ การโต้ตอบของผู้ใช้งานได้รวดเร็วขึ้น เช่น เมื่อพวกเขากดส่งหรือแลกเปลี่ยนข้อมูลอะไรบางอย่างกับเชิร์ฟเวอร์ จะทำให้เกิดการใช้เวลาส่วนหนึ่งในการทำงาน ทำให้ขัดจังหวะผู้ใช้งานได้ โดย AJAX จะสามารถส่งและรับข้อมูลในพื้นหลัง เพื่อให้มีการรีเฟรชหน้าเว็บเฉพาะเพียงส่วนย่อยๆ เท่าที่จำเป็นเท่านั้น โดยไม่จำเป็นต้องมารอโหลดเว็บเพจใหม่ทั้งหมด
@@ -74,21 +92,26 @@
   #### Example
 
   HTML
+
+  ```html
   <html>
-  <head>
-  ....
-  </head>
-  <body>
-  <div id="ajaxResult"></div>
-  <script>
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('ajaxResult').innerText = `Ajax Result: ${JSON.stringify(data)}`;
-      });
-  </script>
-  </body>
+    <head>
+      ....
+    </head>
+    <body>
+      <div id="ajaxResult"></div>
+      <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById(
+              'ajaxResult'
+            ).innerText = `Ajax Result: ${JSON.stringify(data)}`;
+          });
+      </script>
+    </body>
   </html>
+  ```
 
 - Console
   คือเครื่องมือตัวหนึ่งที่ใช้สำหรับ log,debug,test javascript code โดยจะแสดง ข้อมูล,ข้อผิดพลาด หรือคำเตือน ต่างๆ ที่เกิดจากการทำงานใน code ของเรา
